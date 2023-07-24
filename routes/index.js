@@ -1,11 +1,12 @@
-const express = require("express");
+import express from "express";
+
+import {addComment} from "../controllers/rest/comments.js";
 
 const router = express.Router();
 
+// router.get("/video/thumbnail", getVideoThumbnail)
+// router.get("/products", getProducts)
+// router.get("/comments", getComments)
+router.post("/comments/:id", addComment)
 
-router.get("/video/thumbnail", getVideoThumbnail)
-router.get("/products", getProducts)
-router.get("/comments", getComments)
-router.post("/comments", addComment)
-
-export default router;
+export default router

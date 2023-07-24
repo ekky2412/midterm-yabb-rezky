@@ -1,8 +1,10 @@
-const dotenv = require("dotenv").config();
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const router = require("routes/index.js");
+import dotenv from "dotenv"
+import express from "express";
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
+import router from "./routes/index.js";
+
+dotenv.config()
 
 const PORT = process.env.PORT;
 const DB_URL = process.env.DB_URL;
