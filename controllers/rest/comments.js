@@ -5,18 +5,21 @@ import Comment from "../../repositories/models/comment.js"
     
 // }
 
-export const addComment = (req,res) => {
+export const addComment = async (req,res) => {
     const {id} = req.params
+    const {username, comment} = req.body;
 
-    const comment = new Comment({
+    const commentToSave = new Comment({
         videoId: id,
-        username: "ekky2412",
-        comment: "mantap",
+        username,
+        comment,
     });
 
     try{
-        const commentToSave = comment.save()
-        res.status(200).json(commentToSave);
+        const commentToOutput = await commentToSave.save()
+        res.status(200).json({
+            message: `Comment from ${commentToOutput.username} successfully added`
+        });
     } catch (err) {
         res.status(400).json({
             message: err.message
