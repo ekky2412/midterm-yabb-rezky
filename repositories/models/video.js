@@ -15,3 +15,5 @@ const videoSchema = mongoose.Schema({
 }, {
     versionKey: false
 })
+
+export default mongoose.model('Video', videoSchema)
