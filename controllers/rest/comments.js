@@ -1,9 +1,26 @@
 // import Comment from "../../../repositories/models/comment.js"
-import Comment from "../../repositories/models/comment.js"
+import Comment from "../../repositories/comments/models/comment.js"
+import { getCommentsByUsecase } from "../../usecases/comments/comments.js";
 
-// export const getComments = (req,res) => {
-    
-// }
+export const getComments = async (req,res) => {
+    const {id} = req.params;
+    const comments = await getCommentsByUsecase(id);
+
+    if(!comments){
+        return res.status(404).json({
+            message: "Comments not exists!",
+        });
+    }
+
+    let newComments = [];
+
+    comments.newComments.forEach((p, i=0) => {
+        newComments[i] = p;
+        i++;
+    })
+
+    res.json(newComments)
+}
 
 export const addComment = async (req,res) => {
     const {id} = req.params
