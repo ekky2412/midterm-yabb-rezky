@@ -8,3 +8,20 @@ export const getCommentsByVideoIdRepo = async (videoId) => {
         return err;
     }
 }
+
+export const addCommentByRepo = async (id, username, comment) => {
+    try{
+        const commentToSave = new Comment({
+            username,
+            comment,
+            videoId: id
+        });
+        
+        const saveComment = await commentToSave.save()
+        
+        return saveComment
+
+    } catch (err){
+        return err;
+    }
+}

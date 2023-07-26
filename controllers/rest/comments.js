@@ -1,6 +1,6 @@
 // import Comment from "../../../repositories/models/comment.js"
 import Comment from "../../repositories/comments/models/comment.js"
-import { getCommentsByUsecase } from "../../usecases/comments/comments.js";
+import { addCommentByUsecase, getCommentsByUsecase } from "../../usecases/comments/comments.js";
 
 export const getComments = async (req,res) => {
     const {id} = req.params;
@@ -26,14 +26,8 @@ export const addComment = async (req,res) => {
     const {id} = req.params
     const {username, comment} = req.body;
 
-    const commentToSave = new Comment({
-        videoId: id,
-        username,
-        comment,
-    });
-
     try{
-        const commentToOutput = await commentToSave.save()
+        const commentToOutput = await addCommentByUsecase(id, username, comment);
         res.status(200).json({
             message: `Comment from ${commentToOutput.username} successfully added`
         });
