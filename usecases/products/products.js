@@ -1,6 +1,6 @@
 import { getProductsByRepo } from "../../repositories/products/products.js";
 
-export const getProductsByUseCase = async (videoId) => {
+export const getProductsByUsecase = async (videoId) => {
   const products = await getProductsByRepo(videoId);
 
   if (!products || products.length == 0) {
