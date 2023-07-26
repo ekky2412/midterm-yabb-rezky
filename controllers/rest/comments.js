@@ -1,5 +1,3 @@
-// import Comment from "../../../repositories/models/comment.js"
-import Comment from "../../repositories/comments/models/comment.js"
 import { addCommentByUsecase, getCommentsByUsecase } from "../../usecases/comments/comments.js";
 
 export const getComments = async (req,res) => {

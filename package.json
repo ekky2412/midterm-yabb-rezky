@@ -6,7 +6,8 @@
   "author": "Rezky Putratama Raharjo",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "database": "node database/insert.js"
   },
   "type": "module",
   "dependencies": {
