@@ -1,8 +1,8 @@
 import Comment from "./models/comment.js";
 
-export const getCommentsByVideoIdRepo = async (videoId) => {
+export const getCommentsByVideoIdRepo = async (videoID) => {
   try {
-    const comments = await Comment.find({ videoId });
+    const comments = await Comment.find({ videoID });
     return comments;
   } catch (err) {
     return err;
