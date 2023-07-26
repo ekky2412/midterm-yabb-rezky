@@ -15,7 +15,7 @@ const commentSchema = mongoose.Schema(
       type: Date,
       default: Date.now,
     },
-    videoId: {
+    videoID: {
       required: true,
       type: "String",
     },
