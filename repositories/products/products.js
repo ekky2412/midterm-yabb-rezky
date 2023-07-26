@@ -1,10 +1,10 @@
 import Product from "./models/product.js";
 
-export const getProductsByRepo= async (videoId) => {
-    try{
-        const products = await Product.find({videoId});
-        return products;
-    } catch (err){
-        return err;
-    }
-}
+export const getProductsByRepo = async (videoID) => {
+  try {
+    const products = await Product.find({ videoID });
+    return products;
+  } catch (err) {
+    return err;
+  }
+};
