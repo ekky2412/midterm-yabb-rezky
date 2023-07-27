@@ -8,7 +8,7 @@ Here's ER Diagram to show database structure in this repo
 
 ## ii. API Structure
 Here's the API Structure to show what to response when it requested
-![alt text](https://i.imgur.com/o7VIJAj.png)
+![alt text](https://i.imgur.com/mDD9tFO.png)
 
 ## iii. List API Request and Response
 
