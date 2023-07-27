@@ -4,11 +4,11 @@ Creating a backend for the Midterm GoTo Impact Foundation
 
 ## i. Database Structure
 Here's ER Diagram to show database structure in this repo
-![alt text](https://imgur.com/oJHXe3N)
+![alt text](https://imgur.com/oJHXe3N.png)
 
 ## ii. API Structure
 Here's the API Structure to show what to response when it requested
-![alt text](https://imgur.com/Ebp8h4m)
+![alt text](https://imgur.com/Ebp8h4m.png)
 
 ## iii. List API Request and Response
 
